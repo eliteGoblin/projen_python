@@ -3,7 +3,7 @@
 set -eux
 
 reformat () {
-  isort .  # sort imports
+  isort . --skip .env  # sort imports
   black .  # all other code formatting
 }
 

@@ -12,12 +12,13 @@ project = PythonProject(
         "ipdb",
         "isort",
         "mypy",
-        "pycodestyle",
+        "pylint",
         "pytest",
         "pytest_cov",
         "pytest_randomly",
         "tox",
         "twine",
+        "icecream",
     ],
 )
 

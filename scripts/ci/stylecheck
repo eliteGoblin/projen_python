@@ -1,4 +1,3 @@
 
 #!/bin/sh
-# ignore line longer than 80 chars
-pycodestyle --exclude=.venv --config=./pycode.cfg .
+pylint --rcfile=./scripts/ci/pylintrc ./projen_python ./tests
