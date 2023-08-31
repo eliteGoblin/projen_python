@@ -1,23 +1,23 @@
 {
   "dependencies": [
     {
-      "name": "black",
+      "name": "black==23.7.0",
       "type": "devenv"
     },
     {
-      "name": "icecream",
+      "name": "icecream==2.1.3",
       "type": "devenv"
     },
     {
-      "name": "ipdb",
+      "name": "ipdb==0.13.13",
       "type": "devenv"
     },
     {
-      "name": "isort",
+      "name": "isort==5.12.0",
       "type": "devenv"
     },
     {
-      "name": "mypy",
+      "name": "mypy==1.5.1",
       "type": "devenv"
     },
     {
@@ -26,27 +26,19 @@
       "type": "devenv"
     },
     {
-      "name": "pylint",
+      "name": "pylint==2.17.5",
       "type": "devenv"
     },
     {
-      "name": "pytest",
+      "name": "pytest_cov==4.1.0",
       "type": "devenv"
     },
     {
-      "name": "pytest_cov",
+      "name": "pytest_randomly==3.15.0",
       "type": "devenv"
     },
     {
-      "name": "pytest_randomly",
-      "type": "devenv"
-    },
-    {
-      "name": "tox",
-      "type": "devenv"
-    },
-    {
-      "name": "twine",
+      "name": "pytest==7.4.0",
       "type": "devenv"
     },
     {
