@@ -1,9 +1,65 @@
 {
   "dependencies": [
     {
+      "name": "black",
+      "type": "devenv"
+    },
+    {
+      "name": "ipdb",
+      "type": "devenv"
+    },
+    {
+      "name": "isort",
+      "type": "devenv"
+    },
+    {
+      "name": "mypy",
+      "type": "devenv"
+    },
+    {
       "name": "projen",
       "version": "0.73.2",
       "type": "devenv"
+    },
+    {
+      "name": "pycodestyle",
+      "type": "devenv"
+    },
+    {
+      "name": "pytest",
+      "type": "devenv"
+    },
+    {
+      "name": "pytest_cov",
+      "type": "devenv"
+    },
+    {
+      "name": "pytest_randomly",
+      "type": "devenv"
+    },
+    {
+      "name": "tox",
+      "type": "devenv"
+    },
+    {
+      "name": "twine",
+      "type": "devenv"
+    },
+    {
+      "name": "boto3",
+      "type": "runtime"
+    },
+    {
+      "name": "pydantic",
+      "type": "runtime"
+    },
+    {
+      "name": "python_dotenv",
+      "type": "runtime"
+    },
+    {
+      "name": "typer",
+      "type": "runtime"
     },
     {
       "name": "pytest",
