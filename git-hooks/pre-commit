@@ -13,5 +13,3 @@ if [ $exit_status -ne 0 ]; then
     echo "Pre-commit hook failed. Aborting commit."
     exit 1
 fi
-
-exit 0
