@@ -1,5 +1,5 @@
 ---
-  name: lyubishchev CI tests
+  name: Projen Python template CI tests
   on: [push]
   jobs:
     run-format-checker:

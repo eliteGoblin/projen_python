@@ -20,7 +20,7 @@ echo "commit-msg run, got ${commit_msg}"
 
 # Check if the commit message matches the regex
 if [[ ! $commit_msg =~ $regex ]]; then
-    echo "Your commit message must start with a JIRA ID (e.g., XXX-123:), got: ${commit_msg}"
+    echo "Your commit message must start with a JIRA ID (e.g., XXX-123:), got: ${commit_msg}, pls commit again"
     exit 1
 fi
 
