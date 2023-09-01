@@ -1,7 +1,11 @@
+#!/bin/bash
 
+
+set -euo pipefail
+IFS=$'\n\t'
 
 # Regex to match the ticket ID at the beginning of the commit message
-regex='^[A-Z]+-\d+:'
+regex='^[A-Z]+-[0-9]+ '
 
 # Make sure a file is passed as an argument to the script
 if [ -z "$1" ]; then
@@ -12,9 +16,11 @@ fi
 # Read the commit message
 commit_msg=$(cat "$1")
 
+echo "commit-msg run, got ${commit_msg}"
+
 # Check if the commit message matches the regex
 if [[ ! $commit_msg =~ $regex ]]; then
-    echo "Your commit message must start with a JIRA ID (e.g., XXX-123:), got ${commit_msg}"
+    echo "Your commit message must start with a JIRA ID (e.g., XXX-123:), got: ${commit_msg}"
     exit 1
 fi
 

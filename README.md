@@ -32,6 +32,7 @@ Optional
 ```sh
 # Add git pre commit hook
 ln -s -f ../../git-hooks/pre-commit .git/hooks/pre-commit
+ln -s -f ../../git-hooks/commit-msg .git/hooks/commit-msg
 ```
 
 
