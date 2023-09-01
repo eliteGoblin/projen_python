@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Navigate to the repository root
+repo_root="$(git rev-parse --show-toplevel)"
+
+# Run the CI script
+$repo_root/scripts/ci/ci
+
+# Capture the exit status of the script
+exit_status=$?
+
+if [ $exit_status -ne 0 ]; then
+    echo "Pre-commit hook failed. Aborting commit."
+    exit 1
+fi
+
+exit 0
