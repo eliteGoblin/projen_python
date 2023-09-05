@@ -1,16 +1,34 @@
+import logging
 import os
 
 import typer
 from dotenv import load_dotenv
 
+from gandolf.wiz_provider import run_wiz
+from logger import init_logger
+
 if not load_dotenv(dotenv_path=".env_example"):
     raise RuntimeError(f"Failed to load .env file, in {os.getcwd()}")
 
 app = typer.Typer()
+init_logger()
 
 
 @app.command()
-def main(
+def run() -> None:
+    print("Run cmd")
+    result = run_wiz(ghe_webhook_message={"hello": "world"})
+    print(f"Result is {result}")
+
+    logger = logging.getLogger()
+
+    extra_info = {"user_id": 123, "ip_address": "192.168.1.1"}
+
+    logger.info("hello from logger", extra=extra_info)
+
+
+@app.command()
+def demo_main(
     name: str = typer.Option(..., prompt=True, help="The name to greet."),
     age: int = typer.Option(..., help="The age of the person."),
     is_vip: bool = typer.Option(False, "--vip", help="Is the person a VIP?"),
@@ -37,12 +55,6 @@ def main(
 def add(x: float, y: float) -> None:
     """Add two numbers."""
     typer.echo(f"The sum is: {x+y}")
-
-
-@app.command()
-def subtract(x: float, y: float) -> None:
-    """Subtract two numbers."""
-    typer.echo(f"The result is: {x-y}")
 
 
 if __name__ == "__main__":
