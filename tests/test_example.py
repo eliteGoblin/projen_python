@@ -1,6 +1,6 @@
 import pytest
 
-from projen_python.example import hello
+from gandolf.example import hello
 
 
 @pytest.mark.parametrize(
